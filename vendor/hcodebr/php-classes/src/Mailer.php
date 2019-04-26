@@ -2,7 +2,7 @@
 
 namespace Hcode;
 
-use Raint\Tpl;
+use Rain\Tpl;
 
 class Mailer {
 	
@@ -12,10 +12,10 @@ class Mailer {
 		
 		private $mail;
 		
-		public function __contruct($toAddress, $toName, $subject, $tplName, $data=array()){
+		public function __construct($toAddress, $toName, $subject, $tplName, $data=array()){
 
 			$config = array(
-						"tpl_dir"       => $_SERVER["DOCUMENT_ROOT"]."/views-email/",
+						"tpl_dir"       => $_SERVER["DOCUMENT_ROOT"]."/views/email/",
 						"cache_dir"     => $_SERVER["DOCUMENT_ROOT"]."/views-cache/",
 						"debug"         => false // set to false to improve the speed
 					   );
